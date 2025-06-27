@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cabin RPG: The One-Eyed Terror</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background"></div>
+  <main class="game-container">
+    <h1>Cabin RPG: The One-Eyed Terror</h1>
+    <div class="stats">
+      <p><strong>Inventory:</strong> <span id="inventory">Loading...</span></p>
+    </div>
+    <div id="story">
+      <p>You’ve just left the village, rumors of a one-eyed monster gnawing at your mind. Snow crunches underfoot as you make your way back to your cabin, carrying firewood, rabbit meat, your axe, and a compass.</p>
+      <p>Suddenly, you hear rustling from the trees.</p>
+      <button onclick="choiceRustling()">Investigate</button>
+      <button onclick="cautiousLeave()">Leave Cautiously</button>
+      <button onclick="headHome()">Rush Home</button>
+      <button onclick="drawOut()">Draw It Out</button>
+      <button onclick="goHome()">Return Home</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
