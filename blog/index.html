@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabin Blog</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="background"></div>
+  <main class="game-container">
+    <h1>Cabin Blog</h1>
+    <div id="post-list">
+      <p>Loading posts...</p>
+    </div>
+    <button onclick="window.location.href='../index.html'">Return Home</button>
+  </main>
+  <script>
+    const postList = document.getElementById('post-list');
+    const posts = [
+      { title: "First Fireside Thoughts", file: "first-post.md", date: "2025-06-26" },
+      { title: "Frost on the Window", file: "second-post.md", date: "2025-06-27" }
+    ];
+
+    postList.innerHTML = posts.map(post => 
+      \`<div><a href="viewer.html?post=\${post.file}">\${post.title}</a> <span style="opacity:0.6">(\${post.date})</span></div>\`
+    ).join('');
+  </script>
+</body>
+</html>

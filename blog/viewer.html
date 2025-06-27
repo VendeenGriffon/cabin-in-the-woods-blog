@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Viewer</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="background"></div>
+  <main class="game-container">
+    <div id="content">Loading...</div>
+    <button onclick="window.location.href='index.html'">Back to Blog Index</button>
+  </main>
+  <script>
+    const query = new URLSearchParams(window.location.search);
+    const postFile = query.get("post");
+    fetch(postFile)
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById("content").innerHTML = marked.parse(text);
+      })
+      .catch(err => {
+        document.getElementById("content").innerHTML = "<p>Post not found.</p>";
+      });
+  </script>
+</body>
+</html>
