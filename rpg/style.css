@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-  background: #0d1b2a;
   color: #fefae0;
+  background-color: #0d1b2a;
 }
 
 .background {
@@ -15,28 +15,14 @@ body {
   z-index: -1;
 }
 
-.container {
+.game-container {
   max-width: 800px;
-  margin: 5rem auto;
+  margin: 4rem auto;
   padding: 2rem;
-  background-color: rgba(20, 20, 20, 0.7);
+  background-color: rgba(20, 20, 20, 0.75);
   border: 2px solid #fefae0;
   border-radius: 10px;
-  box-shadow: 0 0 15px #000;
-}
-
-nav {
-  margin-top: 1rem;
-}
-
-nav a {
-  margin-right: 1rem;
-  color: #a5a58d;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
+  box-shadow: 0 0 10px #000;
 }
 
 button {
@@ -46,6 +32,7 @@ button {
   border: none;
   font-weight: bold;
   border-radius: 5px;
+  margin-top: 1rem;
   cursor: pointer;
 }
 
