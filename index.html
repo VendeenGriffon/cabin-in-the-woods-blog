@@ -4,24 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cabin in the Woods</title>
+  <title>Cabin RPG</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="background"></div>
-  <main class="container">
-    <h1>Welcome to the Cabin</h1>
-    <p>Here lies the writings, thoughts, and works of a lone author.</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="blog/">Blog</a>
-      <a href="#shop">Shop</a>
-    </nav>
-    <section class="intro">
-      <h2>Latest Work</h2>
-      <p>Of Mortals and Gods — An epic where divine power cuts deep, and survival is a cold fire in the soul.</p>
-      <button onclick="alert('Coming Soon')">Read Preview</button>
-    </section>
+  <main class="game-container">
+    <h1>Cabin in the Woods: Demo</h1>
+    <div class="stats">
+      <p><strong>Health:</strong> <span id="health">100</span></p>
+      <p><strong>Inventory:</strong> <span id="inventory">None</span></p>
+    </div>
+    <div id="story">
+      <p>You awaken to the soft crackle of the fireplace. Outside, snow blankets the earth. A chill runs down your spine—something waits in the woods.</p>
+      <button onclick="startAdventure()">Step Outside</button>
+    </div>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
